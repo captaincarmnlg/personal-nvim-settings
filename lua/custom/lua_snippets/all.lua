@@ -15,12 +15,11 @@ ls.add_snippets("all", {
   }, {
     text { "/**" },
     text {"", "* Copyright (c) ".. current_year .." . All Rights Reserved."},
-    text { "", "* Author: " },
-    insert(1),
+    text { "", "* Author: Nick Jacob Klaver" },
     text {"", "* Title: "},
-    insert(2),
+    insert(1),
     text {"", "* Description: "},
-    insert(3),
-    text {"**/"}
+    insert(2),
+    text {"","**/"}
   }),
 })
