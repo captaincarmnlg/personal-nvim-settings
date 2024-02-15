@@ -5,4 +5,8 @@
 --   pattern = "*",
 --   command = "tabdo wincmd =",
 -- })
+-- relative number makes lines relative 
 vim.wo.relativenumber = true
+-- add snippets path
+vim.g.lua_snippets_path = vim.fn.stdpath "config" .. "/lua/custom/lua_snippets"
+
