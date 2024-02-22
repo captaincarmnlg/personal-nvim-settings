@@ -2,7 +2,9 @@ local overrides = require("custom.configs.overrides")
 
 ---@type NvPluginSpec[]
 local plugins = {
-
+  {
+    'hrsh7th/cmp-nvim-lsp-signature-help'
+  },
   -- Override plugin definition options
 
   -- {
@@ -12,31 +14,45 @@ local plugins = {
   --     require "custom.configs.lspconfig"
   --   end, -- Override to setup mason-lspconfig
   -- },
+
+  -- override plugin configs
+  {
+    "mfussenegger/nvim-dap",
+    "nvimtools/none-ls.nvim"
+  },
+  {
+    "williamboman/mason.nvim",
+    opts = overrides.mason
+  },
   {
     "neovim/nvim-lspconfig",
     -- BufRead is to make sure if you do nvim some_file then this is still going to be loaded
-    event = { "VeryLazy", "BufRead" },
+    event = { "VeryLazy", "BufRead","BufReadPre", "BufNewFile" },
     config = function() end, -- Override to make sure load order is correct
     dependencies = {
       {
         "williamboman/mason.nvim",
         config = function(plugin, opts)
-
-          require "custom.configs.masonlspconfig".setup(plugin, opts)
+          require "custom.configs.mason-lspconfig".setup(plugin, opts)
+          require("custom.configs.mason-null-ls").setup(plugin, opts)
+          require("custom.configs.mason-nvim-dap").setup(plugin, opts)
         end,
       },
       "williamboman/mason-lspconfig",
+      "jay-babu/mason-null-ls.nvim",
+      "jay-babu/mason-nvim-dap.nvim",
       -- TODO: Add mason-null-ls? mason-dap?
     }
   },
-
-
-  -- override plugin configs
   {
-    "williamboman/mason.nvim",
-    opts = overrides.mason
+    "folke/trouble.nvim",
+    dependencies = { "nvim-tree/nvim-web-devicons" },
+    opts = {
+      -- your configuration comes here
+      -- or leave it empty to use the default settings
+      -- refer to the configuration section below
+    },
   },
-
   {
     "nvim-treesitter/nvim-treesitter",
     opts = overrides.treesitter,
@@ -69,13 +85,8 @@ local plugins = {
   },
   {
     "pangloss/vim-javascript",
+    "evanleck/vim-svelte",
   },
-  {
-    "evanleck/vim-svelte", 
-  },
-  
-
-
 
   -- To make a plugin not be loaded
   -- {

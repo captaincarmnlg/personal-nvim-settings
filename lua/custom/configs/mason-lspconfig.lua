@@ -22,7 +22,7 @@ M.setup = function(_, opts)
       -- Default setup for all servers, unless a custom one is defined below
       function(server_name)
         lspconfig[server_name].setup({
-          on_attach = function(client, bufnr)
+            on_attach = function(client, bufnr)
             on_attach(client, bufnr)
             -- Add your other things here
             -- Example being format on save or something
@@ -38,13 +38,6 @@ M.setup = function(_, opts)
       -- Another example with clangd
       -- Users usually run into different offset_encodings issue, 
       -- so this is how to bypass it (kindof)
-      -- ["arduino-language-server"] = function ()
-      --   cmd = {
-      --     "arduino-language-server",
-
-      --   }
-      -- end
-
       ["clangd"] = function()
         lspconfig.clangd.setup({
           cmd = {
@@ -62,7 +55,14 @@ M.setup = function(_, opts)
           capabilities = capabilities,
         })
       end,
-  
+      -- ["arduino-language-server"] = function ()
+      --   cmd = {
+      --     "arduino-language-server",
+
+      --   }
+      -- end
+      
+      
       -- Example: disable auto configuring an LSP
       -- Here, we disable lua_ls so we can use NvChad's default config
       ["lua_ls"] = function() end,
