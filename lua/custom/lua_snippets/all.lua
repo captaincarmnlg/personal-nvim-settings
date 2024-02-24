@@ -22,4 +22,12 @@ ls.add_snippets("all", {
     insert(2),
     text {"","**/"}
   }),
+  snip({
+    trig = "comCPTID",
+    namr = "com App id",
+    dscr = "App id for my alias captaincarmnlg"
+  },{
+    text {"com.captaincarmnlg."},
+    insert(1)
+  })
 })
