@@ -100,6 +100,13 @@ local plugins = {
     end,
   },
   {
+    "diepm/vim-rest-console",
+    lazy = false,
+    config = function()
+      require "custom.configs.vim-rest-console"
+    end
+  },
+  {
     "othree/html5.vim",
     "pangloss/vim-javascript",
     "evanleck/vim-svelte",

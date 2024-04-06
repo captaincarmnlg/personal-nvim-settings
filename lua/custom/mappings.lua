@@ -32,7 +32,11 @@ M.general = {
       function() require('dap').repl.open() end,
       "inspect state"
     },
-
+    ["<leader>mkrq"] = {
+      function() vim.cmd(":call VrcQuery()") end,
+      --https://github.com/diepm/vim-rest-console
+      "make request from current .rest buffer"
+    }
   },
   v = {
     [">"] = { ">gv", "indent" },
