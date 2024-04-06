@@ -38,6 +38,9 @@ M.setup = function(_, opts)
         on_attach = function(client, bufnr)
           on_attach(client, bufnr)
         end,
+        cargo = {
+          allFeatures = true,
+        },
         procMacro = {
           ignored = {
             leptos_macro = {
@@ -84,4 +87,3 @@ M.setup = function(_, opts)
 end
 
 return M
-
