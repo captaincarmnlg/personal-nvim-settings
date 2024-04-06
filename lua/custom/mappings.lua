@@ -45,4 +45,17 @@ M.trouble = {
     },
   }
 }
+M.neogit = {
+  --normal mode
+  n = {
+    ["<leader>gf"] = {
+      function() require("neogit").open({ kind = "floating" }) end,
+      "Open the git as a floating window"
+    },
+    ["<leader>gs"] = {
+      function() require("neogit").open({ kind = "auto" }) end,
+      "Open the git as a auto split window"
+    },
+  }
+}
 return M

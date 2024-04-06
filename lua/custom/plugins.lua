@@ -57,6 +57,21 @@ local plugins = {
       require("trouble").setup()
     end
   },
+  -- neo git
+  {
+    "NeogitOrg/neogit",
+    cmd = "Neogit",
+    dependencies = {
+      "nvim-lua/plenary.nvim",         -- required
+      "sindrets/diffview.nvim",        -- optional - Diff integration
+  
+      -- Only one of these is needed, not both.
+      "nvim-telescope/telescope.nvim", 
+    },
+    config = function()
+      require "custom.configs.neogit"
+     end,
+  },
   {
     "nvim-treesitter/nvim-treesitter",
     opts = overrides.treesitter,
