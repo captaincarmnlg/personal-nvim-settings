@@ -11,11 +11,31 @@ M.general = {
         require("conform").format()
       end,
       "formatting",
-    }
+    },
+    ["<leader>ldb"] = {
+      function() require('dap').toggle_breakpoint() end,
+      "toggle breakpoint"
+    },
+    ["<leader>ldc"] = {
+      function() require('dap').continue() end,
+      "breakpoint continue"
+    },
+    ["<leader>ldso"] = {
+      function() require('dap').step_over() end,
+      "breakpoint step over"
+    },
+    ["<leader>ldsi"] = {
+      function() require('dap').step_into() end,
+      "breakpoint step into"
+    },
+    ["<leader>ldst"] = {
+      function() require('dap').repl.open() end,
+      "inspect state"
+    },
 
   },
   v = {
-    [">"] = { ">gv", "indent"},
+    [">"] = { ">gv", "indent" },
   },
 }
 -- more keybinds!
@@ -58,4 +78,5 @@ M.neogit = {
     },
   }
 }
+
 return M

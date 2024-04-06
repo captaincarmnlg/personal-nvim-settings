@@ -27,7 +27,7 @@ local plugins = {
   {
     "neovim/nvim-lspconfig",
     -- BufRead is to make sure if you do nvim some_file then this is still going to be loaded
-    event = { "VeryLazy", "BufRead","BufReadPre", "BufNewFile" },
+    event = { "VeryLazy", "BufRead", "BufReadPre", "BufNewFile" },
     config = function() end, -- Override to make sure load order is correct
     dependencies = {
       {
@@ -62,15 +62,15 @@ local plugins = {
     "NeogitOrg/neogit",
     cmd = "Neogit",
     dependencies = {
-      "nvim-lua/plenary.nvim",         -- required
-      "sindrets/diffview.nvim",        -- optional - Diff integration
-  
+      "nvim-lua/plenary.nvim",  -- required
+      "sindrets/diffview.nvim", -- optional - Diff integration
+
       -- Only one of these is needed, not both.
-      "nvim-telescope/telescope.nvim", 
+      "nvim-telescope/telescope.nvim",
     },
     config = function()
       require "custom.configs.neogit"
-     end,
+    end,
   },
   {
     "nvim-treesitter/nvim-treesitter",
