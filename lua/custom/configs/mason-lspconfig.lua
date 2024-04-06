@@ -56,7 +56,7 @@ M.setup = function(_, opts)
       lspconfig.clangd.setup({
         cmd = {
           "clangd",
-          "--offset-encoding=utf-16",   -- To match null-ls
+          "--offset-encoding=utf-16", -- To match null-ls
           --  With this, you can configure server with
           --    - .clangd files
           --    - global clangd/config.yaml files

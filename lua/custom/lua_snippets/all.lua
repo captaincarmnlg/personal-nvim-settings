@@ -6,7 +6,7 @@ end
 local snip = ls.snippet
 local text = ls.text_node
 local insert = ls.insert_node
-local current_year = os.date("*t",os.time()).year
+local current_year = os.date("*t", os.time()).year
 ls.add_snippets("all", {
   snip({
     trig = "c) comment",
@@ -14,20 +14,20 @@ ls.add_snippets("all", {
     dscr = "var_dump with formating",
   }, {
     text { "/**" },
-    text {"", "* Copyright (c) ".. current_year .." . All Rights Reserved."},
+    text { "", "* Copyright (c) " .. current_year .. " . All Rights Reserved." },
     text { "", "* Author: Nick Jacob Klaver" },
-    text {"", "* Title: "},
+    text { "", "* Title: " },
     insert(1),
-    text {"", "* Description: "},
+    text { "", "* Description: " },
     insert(2),
-    text {"","**/"}
+    text { "", "**/" }
   }),
   snip({
     trig = "comCPTID",
     namr = "com App id",
     dscr = "App id for my alias captaincarmnlg"
-  },{
-    text {"com.captaincarmnlg."},
+  }, {
+    text { "com.captaincarmnlg." },
     insert(1)
   })
 })

@@ -51,4 +51,3 @@ M.setup = function(_, opts)
   })
 end
 return M
-
