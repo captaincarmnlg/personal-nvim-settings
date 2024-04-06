@@ -32,9 +32,24 @@ M.setup = function(_, opts)
       end,
       -- custom setup for a server goes after the function above
       -- Example, override rust_analyzer
-      -- ["rust_analyzer"] = function ()
-      --   require("rust-tools").setup {}
-      -- end,
+      ["rust_analyzer"] = function ()
+        -- require("rust-tools").setup {}
+        lspconfig.rust_analyzer.setup({
+          on_attach = function(client, bufnr)
+            on_attach(client, bufnr)
+          end,
+          procMacro = {
+            ignored = {
+                leptos_macro = {
+                    -- optional: --
+                    "component",
+                    "server",
+                },
+            },
+          },
+        })
+        
+      end,
       -- Another example with clangd
       -- Users usually run into different offset_encodings issue, 
       -- so this is how to bypass it (kindof)
