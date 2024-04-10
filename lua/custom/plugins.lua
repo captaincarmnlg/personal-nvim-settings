@@ -14,7 +14,13 @@ local plugins = {
   --     require "custom.configs.lspconfig"
   --   end, -- Override to setup mason-lspconfig
   -- },
-
+  {
+    "L3MON4D3/LuaSnip",
+    config = function(_, opts)
+      require("plugins.configs.others").luasnip(opts)
+      require("custom.configs.luasnip")
+    end,
+  },
   -- override plugin configs
   {
     "mfussenegger/nvim-dap",
