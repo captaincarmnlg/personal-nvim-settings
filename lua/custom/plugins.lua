@@ -107,6 +107,10 @@ local plugins = {
     end
   },
   {
+    'normen/vim-pio',
+    cmd = { "PIO", "PIOInit", "PIOInstall", "PIOUninstall", "PIONewProject", "PIOAddLibrary", "PIORemoveLibrary" },
+  },
+  {
     "othree/html5.vim",
     "pangloss/vim-javascript",
     "evanleck/vim-svelte",
