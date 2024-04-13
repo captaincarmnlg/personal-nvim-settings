@@ -121,6 +121,13 @@ local plugins = {
     "pangloss/vim-javascript",
     "evanleck/vim-svelte",
   },
+  {
+    "danymat/neogen", 
+    cmd = "Neogen",
+    config = function()
+      require('neogen').setup ({snippet_engine = "luasnip"})
+    end,
+  }
 
   -- To make a plugin not be loaded
   -- {
