@@ -127,6 +127,10 @@ local plugins = {
     config = function()
       require('neogen').setup ({snippet_engine = "luasnip"})
     end,
+  },
+  {
+    'Exafunction/codeium.vim',
+    event = 'BufEnter'
   }
 
   -- To make a plugin not be loaded

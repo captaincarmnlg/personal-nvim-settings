@@ -36,6 +36,13 @@ M.general = {
       function() vim.cmd(":call VrcQuery()") end,
       --https://github.com/diepm/vim-rest-console
       "make request from current .rest buffer"
+    },
+    ["<leader>tc"]= {
+      function() 
+        vim.g.codeium_enabled = not vim.g.codeium_enabled;
+        vim.print(vim.g.codeium_enabled)
+      end,
+      "toggles the codium plugin"
     }
   },
   v = {

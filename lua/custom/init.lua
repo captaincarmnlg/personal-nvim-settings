@@ -20,7 +20,7 @@ vim.api.nvim_create_autocmd("BufWritePre", {
   pattern = { "*" },
   callback = function() vim.lsp.buf.format() end
 })
-
+vim.g.codeium_enabled = true;
 
 -- highlight yanked text
 vim.api.nvim_create_augroup("custom_buffer", { clear = true })
