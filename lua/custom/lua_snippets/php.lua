@@ -11,7 +11,7 @@ ls.add_snippets("php", {
   snip({
     trig = "vd",
     namr = "var_dump",
-    dscr = "var_dump with formating",
+    dscr = "var_dump with formatting",
   }, {
     text { "echo '#'.__LINE__.'<BR>'.__FILE__.'<br><pre>';" },
     text { "", "var_dump(" },

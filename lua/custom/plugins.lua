@@ -122,16 +122,50 @@ local plugins = {
     "evanleck/vim-svelte",
   },
   {
-    "danymat/neogen", 
+    "danymat/neogen",
     cmd = "Neogen",
     config = function()
-      require('neogen').setup ({snippet_engine = "luasnip"})
+      require('neogen').setup({ snippet_engine = "luasnip" })
     end,
   },
   {
     'Exafunction/codeium.vim',
     event = 'BufEnter'
-  }
+  },
+  {
+    "hedyhli/markdown-toc.nvim",
+    ft = "markdown",
+    cmd = { "Mtoc" },
+    config = function()
+      require("mtoc").setup({
+        headings = {
+          -- Include headings before the ToC (or current line for `:Mtoc insert`).
+          -- Setting to true will include headings that are defined before the ToC
+          -- position to be included in the ToC.
+          before_toc = false,
+        },
+        fences = {
+          enabled = true,
+          -- These fence texts are wrapped within "<!-- % -->", where the '%' is
+          -- substituted with the text.
+          start_text = "toc",
+          end_text = "tocstop"
+          -- An empty line is inserted on top and below the ToC list before the being
+        },
+        auto_update = true,
+        toc_list = {
+          -- string or list of strings (for cycling)
+          -- If cycle_markers = false and markers is a list, only the first is used.
+          -- You can set to '1.' to use a automatically numbered list for ToC (if
+          -- your markdown render supports it).
+          markers = { '*', '+' },
+          -- Example config for cycling markers:
+          ----- markers = {'*', '+', '-'},
+          ----- cycle_markers = true,
+        },
+      })
+    end
+  },
 
   -- To make a plugin not be loaded
   -- {
