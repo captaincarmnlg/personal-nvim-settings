@@ -52,7 +52,7 @@ M.treesitter = {
     "vimdoc",
     "vue",
     "xml",
-    "yaml"
+    "yaml",
   },
   indent = {
     enable = true,
@@ -135,6 +135,7 @@ M.mason = {
     "typos-lsp",                   -- *
     "vim-language-server",         -- vim
     "vue-language-server",         --
+    "sonarlint-language-server",   -- code smells
   },
   automatic_installation = true,
 }
