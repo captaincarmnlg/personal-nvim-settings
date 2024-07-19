@@ -37,8 +37,8 @@ M.general = {
       --https://github.com/diepm/vim-rest-console
       "make request from current .rest buffer"
     },
-    ["<leader>tc"]= {
-      function() 
+    ["<leader>tc"] = {
+      function()
         vim.g.codeium_enabled = not vim.g.codeium_enabled;
         vim.print(vim.g.codeium_enabled)
       end,
@@ -58,12 +58,12 @@ M.trouble = {
       function() require("trouble").toggle() end,
       "Toggle trouble"
     },
-    ["<leader>ttw"] = {
-      function() require("trouble").toggle("workspace_diagnostics") end,
-      "Toggle trouble workspace"
-    },
+    -- ["<leader>ttw"] = {
+    --   function() require("trouble").toggle("workspace_diagnostics") end,
+    --   "Toggle trouble workspace"
+    -- },
     ["<leader>ttd"] = {
-      function() require("trouble").toggle("document_diagnostics") end,
+      function() require("trouble").toggle("diagnostics") end,
       "Toggle trouble document"
     },
     ["<leader>ttq"] = {
