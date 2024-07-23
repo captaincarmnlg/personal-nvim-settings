@@ -183,6 +183,14 @@ local plugins = {
   --   end,
   -- }
 
+  {
+    "nvim-telescope/telescope.nvim",
+    config = function()
+      require "plugins.configs.telescope"
+      require "custom.configs.telescope"
+    end, -- Override to setup mason-lspconfig
+  },
+
   -- To make a plugin not be loaded
   -- {
   --   "NvChad/nvim-colorizer.lua",
