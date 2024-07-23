@@ -27,9 +27,9 @@ ls.add_snippets("markdown", {
     dscr = "cover of a document",
   }, {
     text { "---" },
-    text { "Title: " },
+    text { "", "Title: " },
     insert(1),
-    text { "\n" },
+    text { "" },
     text { "", "Author: Nick Jacob Klaver" },
     text { "", "Date: " .. os.date("%Y-%m-%d") },
     text { "", "Description: " },
@@ -37,8 +37,9 @@ ls.add_snippets("markdown", {
     text { "", "Lang: " },
     insert(3),
     text { "", "urlcolor: blue" },
-    text { "---" },
-    text { "\n\n" },
+    text { "","---" },
+    text { "" },
+    text { "" },
   }),
 
 })
