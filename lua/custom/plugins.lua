@@ -170,6 +170,10 @@ local plugins = {
       require("custom.configs.todo-comments")
     end,
   },
+  {
+    "max397574/better-escape.nvim",
+    enabled = false
+  }
   -- To make a plugin not be loaded
   -- {
   --   "NvChad/nvim-colorizer.lua",
