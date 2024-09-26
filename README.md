@@ -8,7 +8,9 @@
 cargo install ripgrep
 ```
 ## install fd
+```sh
 cargo install fd-find
+```
 
 ## linux
 ```sh
