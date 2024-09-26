@@ -1,6 +1,12 @@
 
 
 
+## install neovim
+```sh
+curl -sL https://github.com/neovim/neovim/archive/refs/tags/v0.10.1.tar.gz | tar -xz
+make CMAKE_BUILD_TYPE=RelWithDebInfo
+make install
+```
 
 
 ## install rip grep
