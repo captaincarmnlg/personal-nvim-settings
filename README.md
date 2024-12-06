@@ -4,6 +4,7 @@
 ## install neovim
 ```sh
 curl -sL https://github.com/neovim/neovim/archive/refs/tags/v0.10.1.tar.gz | tar -xz
+cd neovim-0.10.1
 make CMAKE_BUILD_TYPE=RelWithDebInfo
 make install
 ```
