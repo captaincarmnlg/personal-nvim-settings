@@ -11,7 +11,7 @@ ls.add_snippets("all", {
   snip({
     trig = "c) comment",
     namr = "copyright comment",
-    dscr = "var_dump with formating",
+    dscr = "copyright ",
   }, {
     text { "/**" },
     text { "", "* Copyright (c) " .. current_year .. " . All Rights Reserved." },
@@ -20,6 +20,20 @@ ls.add_snippets("all", {
     insert(1),
     text { "", "* Description: " },
     insert(2),
+    text { "", "**/" }
+  }),
+  snip({
+    trig = "c) comment doxy",
+    namr = "copyright comment doxygen",
+    dscr = "copyright ",
+  }, {
+    text { "/**" },
+    text { "", "* @author Nick Jacob Klaver" },
+    text { "", "* @file " },
+    insert(1),
+    text { "", "* @brief " },
+    insert(2),
+    text { "", "*  @copyright Copyright (c) " .. current_year .. " . All Rights Reserved." },
     text { "", "**/" }
   }),
   snip({
