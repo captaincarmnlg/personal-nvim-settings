@@ -33,7 +33,7 @@ ls.add_snippets("all", {
     insert(1),
     text { "", "* @brief " },
     insert(2),
-    text { "", "*  @copyright Copyright (c) " .. current_year .. " . All Rights Reserved." },
+    text { "", "* @copyright Copyright (c) " .. current_year .. " . All Rights Reserved." },
     text { "", "**/" }
   }),
   snip({
